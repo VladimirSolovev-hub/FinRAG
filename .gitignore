@@ -1,0 +1,36 @@
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OS and Python
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Local datasets, indexes and generated results
+data/
+evaluation/data/
+evaluation/results/
+
+# Model artifacts and caches
+models/
+checkpoints/
+.cache/
+
+# Large data files
+*.parquet
+*.sqlite
+*.sqlite3
+*.db
+*.faiss
+*.index
+
+# IDE
+.idea/
+.vscode/
