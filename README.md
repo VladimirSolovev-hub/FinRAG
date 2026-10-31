@@ -98,8 +98,7 @@ flowchart TD
 
 ### Generation + RAGAS ablation
 
-Для сравнения эффекта reranker провели тест RAGAS, для которого обе конфигурации получили все пять метрик. 
-
+Для сравнения эффекта reranker провели тест RAGAS.
 | Метрика | `full` | `no_reranker` | Разница |
 |---|---:|---:|---:|
 | Faithfulness | 1.000 | 0.861 | +0.139 |
