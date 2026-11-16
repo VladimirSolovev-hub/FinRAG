@@ -1,0 +1,9 @@
+# Copy relevant entries into the repository .gitignore if absent
+.env
+.env.agentic
+agentic/logs/*.jsonl
+agentic/logs/
+evaluation/results/
+.pytest_cache/
+__pycache__/
+*.py[cod]

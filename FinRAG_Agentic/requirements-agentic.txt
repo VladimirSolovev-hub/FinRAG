@@ -1,0 +1,12 @@
+# Agent orchestration and OpenAI-compatible model clients
+langgraph>=1.0,<2
+langchain-core>=1.0,<2
+langchain-openai>=1.0,<2
+
+# Data access and configuration
+psycopg[binary]>=3.2,<4
+python-dotenv>=1.0,<2
+pydantic>=2.8,<3
+
+# Local tests
+pytest>=8.0,<10

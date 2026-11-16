@@ -1,0 +1,23 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: finrag-agentic-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: finrag_agentic
+      POSTGRES_USER: finrag
+      POSTGRES_PASSWORD: finrag_dev_password
+    ports:
+      - "127.0.0.1:54329:5432"
+    volumes:
+      - finrag_agentic_pgdata:/var/lib/postgresql/data
+      - ./database/001_schema.sql:/docker-entrypoint-initdb.d/001_schema.sql:ro
+      - ./database/002_seed_demo.sql:/docker-entrypoint-initdb.d/002_seed_demo.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U finrag -d finrag_agentic"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  finrag_agentic_pgdata:

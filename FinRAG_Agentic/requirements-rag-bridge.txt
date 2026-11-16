@@ -1,0 +1,6 @@
+# Install these only if they are not already installed for the root FinRAG project.
+chromadb>=0.5,<2
+polars>=1.0,<2
+torch>=2.2
+rank-bm25>=0.2.2
+sentence-transformers>=3.0,<6
